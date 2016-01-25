@@ -1,0 +1,21 @@
+----------Strat----------
+----------[目前時間：2015/7/1 上午 10:05:01]----------
+事件發生網頁網址:http://localhost:1437/OrderWeb/Menu/天仁素食.jpg
+事件發生路徑:/OrderWeb/Menu/天仁素食.jpg
+例外狀況訊息:檔案不存在。
+例外堆疊:
+   於 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   於 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context, String overrideVirtualPath)
+   於 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   於 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   於 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+造成錯誤的程式名稱:System.Web
+Session已遺失!
+識別系統別:::1
+IP:::1
+使用瀏覽器:Chrome43
+瀏覽器版本:43.0
+是否支援Cookie:是
+伺服器名稱:localhost
+----------END----------
+

@@ -1,0 +1,41 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link runat="server" href="~/CSS/BroadwiseMenu.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="wrapper" style="width: 900px; margin: 0 auto;">
+            <div id="menu" style="width: 900px;margin-bottom:10px;">
+                <ul>
+                    <li>
+                        <a href="Index.aspx">回首頁</a>
+                    </li>
+                    <li><a href="#">訂單相關</a>
+                        <ul>
+                            <li><a href="OrderList.aspx">訂單列表</a></li>
+                            <li></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">店家菜單</a>
+                        <ul>
+                            <li><a href="ShopList.aspx">店家列表</a></li>
+                            <li><a href="RegisterShop.aspx">新增菜單</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="mailto:TOO06@allianz.com.tw">聯絡管理員</a></li>
+                </ul>
+            </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

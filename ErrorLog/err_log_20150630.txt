@@ -1,0 +1,96 @@
+----------Strat----------
+----------[目前時間：2015/6/30 下午 03:25:34]----------
+事件發生網頁網址:http://localhost:1437/OrderWeb/ShopList.aspx
+事件發生路徑:/OrderWeb/ShopList.aspx
+例外狀況訊息:無效的回傳或回呼引數。已在組態中使用 <pages enableEventValidation="true"/> 或在網頁中使用 <%@ Page EnableEventValidation="true" %> 啟用事件驗證。基於安全性理由，這項功能驗證回傳或回呼引數是來自原本呈現它們的伺服器控制項。如果資料為有效並且是必須的，請使用 ClientScriptManager.RegisterForEventValidation 方法註冊回傳或回呼資料，以進行驗證。
+例外堆疊:
+   於 System.Web.UI.ClientScriptManager.ValidateEvent(String uniqueId, String argument)
+   於 System.Web.UI.Control.ValidateEvent(String uniqueID, String eventArgument)
+   於 System.Web.UI.WebControls.DropDownList.LoadPostData(String postDataKey, NameValueCollection postCollection)
+   於 System.Web.UI.WebControls.DropDownList.System.Web.UI.IPostBackDataHandler.LoadPostData(String postDataKey, NameValueCollection postCollection)
+   於 System.Web.UI.Page.ProcessPostData(NameValueCollection postData, Boolean fBeforeLoad)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+造成錯誤的程式名稱:System.Web
+使用者名稱:TOO06
+識別系統別:::1
+IP:::1
+使用瀏覽器:IE8
+瀏覽器版本:8.0
+是否支援Cookie:是
+伺服器名稱:localhost
+----------END----------
+
+----------Strat----------
+----------[目前時間：2015/6/30 下午 03:30:18]----------
+事件發生網頁網址:http://localhost:1437/OrderWeb/ShopList.aspx
+事件發生路徑:/OrderWeb/ShopList.aspx
+例外狀況訊息:無效的回傳或回呼引數。已在組態中使用 <pages enableEventValidation="true"/> 或在網頁中使用 <%@ Page EnableEventValidation="true" %> 啟用事件驗證。基於安全性理由，這項功能驗證回傳或回呼引數是來自原本呈現它們的伺服器控制項。如果資料為有效並且是必須的，請使用 ClientScriptManager.RegisterForEventValidation 方法註冊回傳或回呼資料，以進行驗證。
+例外堆疊:
+   於 System.Web.UI.ClientScriptManager.ValidateEvent(String uniqueId, String argument)
+   於 System.Web.UI.Control.ValidateEvent(String uniqueID, String eventArgument)
+   於 System.Web.UI.WebControls.DropDownList.LoadPostData(String postDataKey, NameValueCollection postCollection)
+   於 System.Web.UI.WebControls.DropDownList.System.Web.UI.IPostBackDataHandler.LoadPostData(String postDataKey, NameValueCollection postCollection)
+   於 System.Web.UI.Page.ProcessPostData(NameValueCollection postData, Boolean fBeforeLoad)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+造成錯誤的程式名稱:System.Web
+使用者名稱:TOO06
+識別系統別:::1
+IP:::1
+使用瀏覽器:IE8
+瀏覽器版本:8.0
+是否支援Cookie:是
+伺服器名稱:localhost
+----------END----------
+
+----------Strat----------
+----------[目前時間：2015/6/30 下午 04:04:34]----------
+事件發生網頁網址:http://localhost:1437/OrderWeb/Test/ShopList.aspx
+事件發生路徑:/OrderWeb/Test/ShopList.aspx
+例外狀況訊息:檔案 '/OrderWeb/Test/ShopList.aspx' 不存在。
+例外堆疊:
+   於 System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   於 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   於 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   於 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   於 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   於 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   於 System.Web.UI.PageHandlerFactory.System.Web.IHttpHandlerFactory2.GetHandler(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   於 System.Web.HttpApplication.MapHttpHandler(HttpContext context, String requestType, VirtualPath path, String pathTranslated, Boolean useAppConfig)
+   於 System.Web.HttpApplication.MapHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   於 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+造成錯誤的程式名稱:System.Web
+Session已遺失!
+識別系統別:::1
+IP:::1
+使用瀏覽器:Chrome43
+瀏覽器版本:43.0
+是否支援Cookie:是
+伺服器名稱:localhost
+----------END----------
+
+----------Strat----------
+----------[目前時間：2015/6/30 下午 04:05:03]----------
+事件發生網頁網址:http://localhost:1437/OrderWeb/Test/ShopList.aspx
+事件發生路徑:/OrderWeb/Test/ShopList.aspx
+例外狀況訊息:檔案 '/OrderWeb/Test/ShopList.aspx' 不存在。
+例外堆疊:
+   於 System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   於 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   於 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   於 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   於 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   於 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   於 System.Web.UI.PageHandlerFactory.System.Web.IHttpHandlerFactory2.GetHandler(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   於 System.Web.HttpApplication.MapHttpHandler(HttpContext context, String requestType, VirtualPath path, String pathTranslated, Boolean useAppConfig)
+   於 System.Web.HttpApplication.MapHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   於 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+造成錯誤的程式名稱:System.Web
+Session已遺失!
+識別系統別:::1
+IP:::1
+使用瀏覽器:Chrome43
+瀏覽器版本:43.0
+是否支援Cookie:是
+伺服器名稱:localhost
+----------END----------
+

@@ -1,0 +1,48 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css" />
+    <script type="text/javascript" src="<%=ResolveUrl("~/jquery-ui/external/jquery/jquery.js") %>"></script>
+    <%
+        if (!(Request.Browser.Type.Equals("IE8") || Request.Browser.Type.Equals("IE7")))
+        {
+            Response.Write(@"<link rel=""Stylesheet"" href=""SweetAlert/sweetalert.css"" /> ");
+            Response.Write(@"<script type=""text/javascript"" src=""" + ResolveUrl("~/SweetAlert/sweetalert.min.js") + @"""></script>");
+        }
+    %>
+    <script type="text/javascript">
+        function IsIE8orIE7() {
+            var BrowserVersion = navigator.userAgent;
+            if (BrowserVersion.indexOf("MSIE 8.0") == -1 && BrowserVersion.indexOf("MSIE 7.0") == -1)
+                return false;
+            else
+                return true;
+        }
+    </script>
+    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="wrapper" style="width: 900px; margin: 0 auto;">
+        <ul class="nav nav-tabs" style="margin: 20px 0px;">
+            <li runat="server" role="presentation" id="Index"><a href="Index.aspx">訂購記錄</a></li>
+            <li runat="server" role="presentation" id="OrderList"><a href="OrderList.aspx">訂單列表</a></li>
+            <li runat="server" role="presentation" id="ShopList"><a href="ShopList.aspx">店家列表</a></li>
+            <li runat="server" role="presentation" id="MyOrderList"><a href="MyOrderList.aspx">我的開單</a></li>
+            <li runat="server" role="presentation" id="RegisterShop"><a href="RegisterShop.aspx">
+                新增菜單</a></li>
+            <li runat="server" role="presentation" id="OrderRule"><a href="OrderRule.aspx">訂單規則</a></li>
+            <li><a href="mailto:TOO06@allianz.com.tw">聯絡管理員</a></li>
+        </ul>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
