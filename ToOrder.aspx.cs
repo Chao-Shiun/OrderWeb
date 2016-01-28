@@ -36,10 +36,8 @@ public partial class ToOrder : BasePage
                                 OrderRemark.Text = HttpUtility.HtmlEncode(dr.GetString(1));
                                 OrderRemark.Font.Size = FontUnit.Large;
                             }
-                            dr.Close();
                         }
                     }
-                    conn.Close();
                     if (Deadline == null)
                     {
                         string blockjs=null;
@@ -73,11 +71,9 @@ public partial class ToOrder : BasePage
                         {
                             while (dr.Read())
                                 FoodItems.Items.Add(new ListItem(HttpUtility.HtmlEncode(dr.GetString(0)), dr.GetGuid(1).ToString()));
-                            dr.Close();
                         }
                         cmd.Cancel();
                     }
-                    conn.Close();
                 }
                 #endregion
 
@@ -118,10 +114,8 @@ public partial class ToOrder : BasePage
                 {
                     Chart1.DataSource = dr;
                     Chart1.DataBind();
-                    dr.Close();
                 }
             }
-            conn.Close();
         }
     }
     /// <summary>
@@ -141,7 +135,6 @@ public partial class ToOrder : BasePage
                 cmd.Parameters[1].Value = false;
                 Deadline = (DateTime)cmd.ExecuteScalar();
             }
-            conn.Close();
 
             string blockjs;
 
@@ -276,10 +269,6 @@ public partial class ToOrder : BasePage
                     AlertMessage(EX.Message);
                     ErrorLog(EX);
                 }
-                finally
-                {
-                    conn.Close();
-                }
             }
         }
         if (Request.Browser.Type.Equals("IE8") || Request.Browser.Type.Equals("IE7"))
@@ -354,10 +343,8 @@ public partial class ToOrder : BasePage
                             Price.Text = string.Format("{0:C1}", dr.GetDecimal(0));
                             Total.Text = string.Format("{0:C1}", dr.GetDecimal(0) * int.Parse(Quantity.SelectedValue));
                         }
-                        dr.Close();
                     }
                 }
-                conn.Close();
             }
         }
     }

@@ -59,11 +59,9 @@ public partial class OrderList : BasePage
                         DepartMent.DataValueField = "DepartmentName";
                         DepartMent.DataSource = dr;
                         DepartMent.DataBind();
-                        dr.Close();
                     }
                     cmd.Cancel();
                 }
-                conn.Close();
             }
             #endregion
 
@@ -159,7 +157,6 @@ public partial class OrderList : BasePage
                         endCenter.Text = "</center>";
                         td.Controls.Add(endCenter);
                         cmd.Cancel();
-                        dr.Close();
                     }
                     #endregion
                     /*#region 設定訂單管理按鈕開單者才看得到
@@ -178,7 +175,6 @@ public partial class OrderList : BasePage
                     }
                     #endregion*/
                 }
-                conn.Close();
             }
         }
     }
@@ -486,10 +482,8 @@ public partial class OrderList : BasePage
                         AlertMessage("查無有效訂單!", "warning");
                         ucPagination.EPage = 1;
                     }
-                    dr.Close();
                 }
             }
-            conn.Close();
         }
     }
 
@@ -515,7 +509,6 @@ public partial class OrderList : BasePage
                 if (count <= pagenumber)
                     ucPagination.CPage = count;
             }
-            conn.Close();
         }
     }
     protected void QueryCondition_Click(object sender, EventArgs e)

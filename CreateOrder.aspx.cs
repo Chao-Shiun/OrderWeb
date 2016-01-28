@@ -56,11 +56,9 @@ public partial class CreateOrder : BasePage
                     {
                         dr.Read();
                         ShopName.Text = HttpUtility.HtmlEncode(dr.GetString(0));
-                        dr.Close();
                     }
                     cmd.Cancel();
                 }
-                conn.Close();
             }
         }
     }
@@ -124,10 +122,6 @@ public partial class CreateOrder : BasePage
                 cmd.Transaction.Rollback();
                 AlertMessage(EX.Message);
                 ErrorLog(EX);
-            }
-            finally
-            {
-                conn.Close();
             }
 
             string blockjs = null;

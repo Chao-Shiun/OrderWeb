@@ -75,7 +75,6 @@ public partial class Login : BasePage
 
                     if (cmd.ExecuteScalar() != null)
                     {
-                        conn.Close();
                         AlertMessage("該帳號已經存在，如有疑問請聯繫管理員!");
                         return;
                     }
@@ -115,10 +114,6 @@ public partial class Login : BasePage
                     AlertMessage(EX.Message);
                     ErrorLog(EX);
                 }
-                finally
-                {
-                    conn.Close();
-                }
             }
         }
         string blockjs = null;
@@ -152,11 +147,9 @@ public partial class Login : BasePage
                 {
                     while (dr.Read())
                         Department.Items.Add(new ListItem(dr.GetString(0), dr.GetByte(1).ToString()));
-                    dr.Close();
                 }
                 cmd.Cancel();
             }
-            conn.Close();
         }
     }
 
@@ -206,7 +199,6 @@ public partial class Login : BasePage
                 cmd.Parameters[0].Value = InputUserID.Text.Trim().ToUpper();
                 userID = cmd.ExecuteScalar() as string;
             }
-            conn.Close();
         }
         if (userID == null)
         {
@@ -232,7 +224,6 @@ public partial class Login : BasePage
 
                 ResultuserID = cmd.ExecuteScalar() as string;
             }
-            conn.Close();
         }
         if (ResultuserID != null)
         {

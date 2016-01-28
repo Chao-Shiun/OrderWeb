@@ -35,7 +35,6 @@ public partial class ADLogin1 : System.Web.UI.Page
                     cmd.Parameters[0].Value = cADName;
                     userID = (string)cmd.ExecuteScalar();
                 }
-                conn.Close();
             }
             if (userID == null)
             {
@@ -54,7 +53,6 @@ public partial class ADLogin1 : System.Web.UI.Page
                     userID = cmd.ExecuteScalar() as string;
                     cmd.Cancel();
                 }
-                conn.Close();
             }
             if (userID != null)
             {
@@ -79,11 +77,9 @@ public partial class ADLogin1 : System.Web.UI.Page
                         {
                             while (dr.Read())
                                 Department.Items.Add(new ListItem(dr.GetString(0), dr.GetByte(1).ToString()));
-                            dr.Close();
                         }
                         cmd.Cancel();
                     }
-                    conn.Close();
                 }
             }
             #endregion
@@ -125,7 +121,6 @@ public partial class ADLogin1 : System.Web.UI.Page
                 cmd.Parameters[2].Value = Department.SelectedValue;
                 cmd.ExecuteNonQuery();
             }
-            conn.Close();
         }
 
         Session.Add("userID", ViewState["userID"].ToString());

@@ -87,7 +87,6 @@ public partial class ShopList : BasePage
                 if (count <= pagenumber)
                     ucPagination.CPage = count;
             }
-            conn.Close();
         }
     }
 
@@ -210,10 +209,8 @@ public partial class ShopList : BasePage
                     {
                         ucPagination.Visible = true;
                     }
-                    dr.Close();
                 }
             }
-            conn.Close();
         }
     }
 
@@ -250,11 +247,8 @@ public partial class ShopList : BasePage
                         LiteralControl endCenter = new LiteralControl();
                         endCenter.Text = "</center>";
                         td.Controls.Add(endCenter);
-                        cmd.Dispose();
-                        dr.Close();
                     }
                 }
-                conn.Close();
             }
         }
     }

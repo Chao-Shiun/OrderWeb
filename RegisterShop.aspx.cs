@@ -109,11 +109,6 @@ public partial class RegisterShop : BasePage
                     AlertMessage(EX.Message);
                     ErrorLog(EX);
                 }
-                finally
-                {
-                    if (conn.State != ConnectionState.Closed)
-                        conn.Close();
-                }
                 string blockjs = null;
                 if (Request.Browser.Type.Equals("IE8") || Request.Browser.Type.Equals("IE7"))
                 {

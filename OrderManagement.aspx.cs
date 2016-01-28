@@ -62,12 +62,10 @@ public partial class OrderManagement : BasePage
                             {
                                 AlertMessage("目前尚未有人訂購!");
                             }
-                            dr.Close();
                         }
                         #endregion
                         cmd.Cancel();
                     }
-                    conn.Close();
                 }
                 CreatePic();
             }
@@ -99,10 +97,8 @@ public partial class OrderManagement : BasePage
                 {
                     Chart1.DataSource = dr;
                     Chart1.DataBind();
-                    dr.Close();
                 }
             }
-            conn.Close();
         }
     }
 
@@ -194,10 +190,6 @@ public partial class OrderManagement : BasePage
                     AlertMessage(EX.Message);
                     ErrorLog(EX);
                 }
-                finally
-                {
-                    conn.Close();
-                }
             }
         }
 
@@ -251,11 +243,9 @@ public partial class OrderManagement : BasePage
                         LinkButton btnCancel = Repeater1.Controls[0].FindControl("Cancel") as LinkButton;
                         btnCancel.CommandName = ViewState["OrderID"].ToString();
                     }
-                    dr.Close();
                 }
                 cmd.Cancel();
             }
-            conn.Close();
         }
     }
 
@@ -288,10 +278,6 @@ public partial class OrderManagement : BasePage
             {
                 AlertMessage(EX.Message);
                 ErrorLog(EX);
-            }
-            finally
-            {
-                conn.Close();
             }
             //Response.Write("<script>alert('已成功取消該訂單!');location.href='Index.aspx';</script>");
             string blockjs = null;

@@ -29,7 +29,6 @@ public partial class Index : BasePage
                     {
                         Repeater1.DataSource = dr;
                         Repeater1.DataBind();
-                        dr.Close();
                     }
                     cmd.Cancel();
 
@@ -68,10 +67,8 @@ public partial class Index : BasePage
                             OrderMessage.CssClass = "label label-warning";
                             OrderMessage.Font.Size = FontUnit.Large;
                         }
-                        dr.Close();
                     }
                 }
-                conn.Close();
             }
         }
     }
@@ -104,7 +101,6 @@ public partial class Index : BasePage
                             if (DateTime.Now.CompareTo((DateTime)cmd.ExecuteScalar()) >= 0)
                                 btnModifly.Attributes["disabled"] = "disabled";
                         }
-                        conn.Close();
                     }
                     break;
                 case "已付款":
@@ -139,8 +135,6 @@ public partial class Index : BasePage
                     
                     if (dr.GetBoolean(0))
                     {
-                        dr.Close();
-                        conn.Close();
                         if (Request.Browser.Type.Equals("IE8") || Request.Browser.Type.Equals("IE7"))
                             Response.Write("<script>alert('開單者已取消訂單!');location.href='Index.aspx';</script>");
                         else
@@ -150,8 +144,6 @@ public partial class Index : BasePage
                     }
                     if (DateTime.Now.CompareTo(dr.GetDateTime(1)) >= 0)
                     {
-                        dr.Close();
-                        conn.Close();
                         if (Request.Browser.Type.Equals("IE8") || Request.Browser.Type.Equals("IE7"))
                         Response.Write("<script>alert('已超過收單時間，無法取消訂單，請直接聯繫開單人!');location.href='Index.aspx';</script>");
                         else
@@ -159,7 +151,6 @@ public partial class Index : BasePage
                         ShowAlert(blockjs);
                         return;
                     }
-                    dr.Close();
                 }
                 cmd.Parameters.Clear();
 
@@ -169,7 +160,6 @@ public partial class Index : BasePage
 
                 cmd.ExecuteNonQuery();
             }
-            conn.Close();
         }
         if (Request.Browser.Type.Equals("IE8") || Request.Browser.Type.Equals("IE7"))
             Response.Write("<script>alert('訂單已成功取消!');location.href='Index.aspx';</script>");

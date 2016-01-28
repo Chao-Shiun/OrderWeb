@@ -212,10 +212,8 @@ public partial class MyOrderList : BasePage
                         AlertMessage("查無開單紀錄!", "warning");
                         ucPagination.EPage = 1;
                     }
-                    dr.Close();
                 }
             }
-            conn.Close();
         }
     }
     /// <summary>
@@ -239,7 +237,6 @@ public partial class MyOrderList : BasePage
                 if (count <= pagenumber)
                     ucPagination.CPage = count;
             }
-            conn.Close();
         }
     }
 }
